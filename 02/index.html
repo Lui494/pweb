@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Raiz Quadrada</title>
+    <script>
+        // Função da raiz quadrada
+        function minhafuncao(num){
+            var raiz = Math.sqrt(num);
+            alert("Raiz de " + num + " = " + raiz);
+        }
+
+        // Função para escrever na primeira div
+        function escreveNaDiv(){
+            var texto = prompt("Digite um texto para escrever na Div:");
+            document.getElementById("minhaDiv").innerHTML = texto;
+        }
+
+        // Função para escrever na segunda div
+        function escreveTextoDinamico(){
+            var texto = prompt("Digite um texto dinâmico:");
+            document.getElementById("minhaDiv2").innerHTML = texto;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Raiz Quadrada</h1>
+
+    <button onclick="minhafuncao(25)">Raiz de 25</button><br>
+    <button onclick="minhafuncao(36)">Raiz de 36</button><br>
+    <button onclick="minhafuncao(49)">Raiz de 49</button><br>
+
+<hr>
+    <br><br>
+
+    <h2>Escrevendo na Div</h2>
+    <button onclick="escreveNaDiv()">Escrever</button>
+    <div id="minhaDiv"></div>
+<hr>
+    <br><br>
+
+    <h2>Escrevendo o Texto Dinâmico</h2>
+    <button onclick="escreveTextoDinamico()">Escrever</button>
+    <div id="minhaDiv2"></div>
+<hr>
+</body>
+</html>
