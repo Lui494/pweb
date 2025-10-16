@@ -16,10 +16,15 @@
     linguagens[6] = 'C ++';
     function mostrarlistalinguagens(){
         const container = document.getElementById('minhaDiv');
-        for var ( i = 0; i < linguagens.length; i++){
+        for (var i = 0; i < linguagens.length; i++){
             var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
             container.innerHTML += tag;
           }
+        }
+
+            var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
+            container.innerHTML += tag;
+        }
  
     }
 
@@ -28,7 +33,7 @@
 <body>
     <h1>Array de linguagens</h1>
     <button onclick="mostrarlistalinguagens()">criar Array</button><br><br>
-    <button onclick="posicaolinguagens()">posiçao do Array Array</button><br><br>
+    <button onclick="posicaolinguagens()">posiçao do Array</button><br><br>
     <div id = "minhaDiv"></div>
 
 </body>
