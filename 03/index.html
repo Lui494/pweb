@@ -1,41 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento</title>
- <script>
-    let linguagens = Array();
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documento</title>
+        <script>
+            let linguagens = [];
 
-    linguagens[0] = 'Dart';
-    linguagens[1] = 'PHP';
-    linguagens[2] = 'Java';
-    linguagens[3] = 'Pyton';
-    linguagens[4] = 'Perl';
-    linguagens[5] = 'Ruby on Rails';
-    linguagens[6] = 'C ++';
-    function mostrarlistalinguagens(){
-        const container = document.getElementById('minhaDiv');
-        for (var i = 0; i < linguagens.length; i++){
-            var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
-            container.innerHTML += tag;
-          }
-        }
+            linguagens[0] = 'Dart';
+            linguagens[1] = 'PHP';
+            linguagens[2] = 'Java';
+            linguagens[3] = 'Python'; 
+            linguagens[4] = 'Perl';
+            linguagens[5] = 'Ruby on Rails';
+            linguagens[6] = 'C++'; 
 
-            var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
-            container.innerHTML += tag;
-        }
- 
-    }
-
-</script>
-</head>
-<body>
-    <h1>Array de linguagens</h1>
-    <button onclick="mostrarlistalinguagens()">criar Array</button><br><br>
-    <button onclick="posicaolinguagens()">posiçao do Array</button><br><br>
-    <div id = "minhaDiv"></div>
-
-</body>
+            function mostrarlistalinguagens() {
+                const container = document.getElementById('minhaDiv');
+                container.innerHTML = '';
+                for (var i = 0; i < linguagens.length; i++) {
+                    var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
+                    container.innerHTML += tag;
+                }
+            }
+            function posicaolinguagens() {
+                alert("A quantidade de linguagens no array é: " + linguagens.length);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Array de Linguagens</h1>
+        <button onclick="mostrarlistalinguagens()">Criar Array</button><br><br>
+        <button onclick="posicaolinguagens()">Posição do Array</button><br><br>
+        <div id="minhaDiv"></div>
+    </body>
 </html>
-
