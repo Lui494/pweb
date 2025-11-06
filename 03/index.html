@@ -28,9 +28,51 @@
         </script>
     </head>
     <body>
-        <h1>Array de Linguagens</h1>
-        <button onclick="mostrarlistalinguagens()">Criar Array</button><br><br>
-        <button onclick="posicaolinguagens()">Posição do Array</button><br><br>
+        <h1>Array de Frutas</h1>
+        <button onclick="mostrarlistafrutas()">Criar Array</button><br><br>
+        <button onclick="posicaofrutas()">Posição do Array</button><br><br>
+        <div id="minhaDiv"></div>
+    </body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documento</title>
+        <script>
+            let linguagens = [];
+
+            frutas[0] = 'Dart';
+            frutas[1] = 'PHP';
+            frutas[2] = 'Java';
+            frutas[3] = 'Python'; 
+            frutas[4] = 'Perl';
+            frutas[5] = 'Ruby on Rails';
+            frutas[6] = 'C++'; 
+
+            function mostrarlistafrutas() {
+                const container = document.getElementById('minhaDiv');
+                for (var i = 0; i < linguagens.length; i++) {
+                    var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
+                    container.innerHTML += tag;
+                }
+            }
+            function posicaofrutas() {
+                alert("A quantidade de frutas no array é: " + frutas.length);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Array de frutas</h1>
+        <button onclick="mostrarlistafrutas()">Criar Array</button><br><br>
+        <button onclick="posicaofrutas()">Posição do Array</button><br><br>
         <div id="minhaDiv"></div>
     </body>
 </html>
