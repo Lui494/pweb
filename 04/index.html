@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciando uma Pilha de Pessoas</title>
+</head>
+<body>
+    <h2>Gerenciando uma Pilha de Pessoas</h2>
+
+    <label for="nomePessoa">Nome da pessoa:</label>
+    <input type="text" id="nomePessoa" placeholder="Digite um nome">
+    <button onclick="adicionarPessoa()">Adicionar à pilha</button>
+    <button onclick="removerPessoa()">Remover última pessoa</button>
+
+    <h3>Pilha atual:</h3>
+    <ul id="listaPessoas"></ul>
+
+    <script>
+        // Cria um array vazio chamado pilhaPessoas
+        let pilhaPessoas = [];
+
+        // Função para atualizar a lista exibida na tela
+        function atualizarLista() {
+            const lista = document.getElementById("listaPessoas");
+            lista.innerHTML = "";
+            pilhaPessoas.forEach(pessoa => {
+                const li = document.createElement("li");
+                li.textContent = pessoa;
+                lista.appendChild(li);
+            });
+        }
+
+        // Adiciona nome de pessoa à pilha com push()
+        function adicionarPessoa() {
+            const nome = document.getElementById("nomePessoa").value.trim();
+            if (nome !== "") {
+                pilhaPessoas.push(nome);
+                atualizarLista();
+                document.getElementById("nomePessoa").value = "";
+            } else {
+                alert("Por favor, digite um nome antes de adicionar.");
+            }
+        }
+
+        // Remove última pessoa adicionada com pop() e mostra em um alert
+        function removerPessoa() {
+            if (pilhaPessoas.length > 0) {
+                const removida = pilhaPessoas.pop();
+                atualizarLista();
+                alert(`A pessoa removida foi: ${removida}`);
+            } else {
+                alert("A pilha está vazia!");
+            }
+        }
+    </script>
+</body>
+</html>
